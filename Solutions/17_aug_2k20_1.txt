@@ -1,0 +1,17 @@
+// https://www.interviewbit.com/problems/longest-increasing-subsequence/
+
+int Solution::lis(const vector<int> &A) {
+    if(A.size() == 0) return 0; // vector is empty
+    int dp[A.size()];
+    for(int i = 0; i < A.size(); i++) dp[i] = 1; // single elt is lis of len 1
+    
+    // consider the subseq till ith index then it's len is depend on all prev subseq(elts)
+    for(int i = 1; i < A.size(); i++) {
+        for(int j = 0; j < i; j++) {
+            if(A[j] < A[i]) {
+                dp[i] = max(dp[i], dp[j]+1);
+            }
+        }
+    }
+    return *max_element(dp,dp+A.size());
+}
