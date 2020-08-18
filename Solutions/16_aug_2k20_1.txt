@@ -1,0 +1,62 @@
+// https://www.interviewbit.com/problems/min-stack/
+/*
+Problem faced: How to remember the previous min elt
+Solution: Store something/info from which previous min elt can be obtained
+Approach : Mathematical
+*/
+
+stack<int> s;
+int min_elt = -1;
+MinStack::MinStack() {
+    // empty the stack if it is not
+    while(s.size()) {
+        s.pop();
+    }
+    min_elt = -1;
+}
+
+void MinStack::push(int x) {
+    
+    if(s.size()==0) { // first element
+        min_elt = x;
+        s.push(x);
+    }
+    else { // when stack is not empty
+        if(x < min_elt) {
+            s.push(2*x-min_elt);
+            min_elt = x;
+        }
+        else {
+            s.push(x);
+        }
+    }
+}
+
+void MinStack::pop() {
+    if(s.size() != 0) {
+        if(s.size()==1) {
+            s.pop();
+            min_elt = -1;
+        }
+        else {
+            if(s.top() >= min_elt) {
+                s.pop();
+            }
+            else {
+                min_elt = min_elt * 2 - s.top();
+                s.pop();
+            }
+        }
+    }
+}
+
+int MinStack::top() {
+    if(s.size() == 0) return -1;
+    if(s.top() >= min_elt) return s.top();
+    else return min_elt;
+}
+
+int MinStack::getMin() {
+    return min_elt;
+}
+
