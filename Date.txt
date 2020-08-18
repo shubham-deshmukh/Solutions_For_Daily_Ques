@@ -1,4 +1,10 @@
-16/08/2020 : https://www.interviewbit.com/problems/min-stack/
-17/08/2020 : https://www.interviewbit.com/problems/longest-increasing-subsequence/
-18/08/2020 : 1. https://leetcode.com/problems/roman-to-integer/ 2. https://leetcode.com/problems/maximum-subarray/
-19/08/2020 : 1. https://www.interviewbit.com/problems/longest-common-subsequence/ 2. https://leetcode.com/problems/integer-to-roman/
+16/08/2020 : 
+  https://www.interviewbit.com/problems/min-stack/
+17/08/2020 : 
+  https://www.interviewbit.com/problems/longest-increasing-subsequence/
+18/08/2020 : 
+  1. https://leetcode.com/problems/roman-to-integer/ 
+  2. https://leetcode.com/problems/maximum-subarray/
+19/08/2020 : 
+  1. https://www.interviewbit.com/problems/longest-common-subsequence/ 
+  2. https://leetcode.com/problems/integer-to-roman/
