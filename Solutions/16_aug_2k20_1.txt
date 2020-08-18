@@ -3,6 +3,7 @@
 Problem faced: How to remember the previous min elt
 Solution: Store something/info from which previous min elt can be obtained
 Approach : Mathematical
+Additional Constraint: Using only single stack
 */
 
 stack<int> s;
