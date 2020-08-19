@@ -1,0 +1,26 @@
+// algorithm:
+/*
+initialize sum = 0 and max sum to first num
+for each num
+    if by adding current num leads to greater sum 
+        then add the num
+    else sum will be the number
+    if max sum is less than sum 
+        then max sum is sum
+return sum
+*/
+
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+
+        int max_sum = nums[0];
+        int sum = 0;
+        for(int i = 0; i < nums.size(); i++) {
+            int num = nums[i];
+            sum = max(sum+num, num);
+            max_sum = max(max_sum, sum);
+        }
+        return max_sum;  
+    }
+};
